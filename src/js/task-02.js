@@ -28,12 +28,14 @@ const ingredients = [
 // items.append(element, element1, element2, element3, element4, element5)
 // items.classList.add("item")
 // console.log(items)
+const items = document.getElementById("ingredients")
 
-ingredients.map((ingredient) => {
+
+const ingredient1 = ingredients.map(ingredient => {
   const itemEl = document.createElement('li');
   itemEl.classList.add('item');
   itemEl.textContent = ingredient;
   return itemEl;
-}).join(``);
+})
 
-ingredients.insertAdjacentHTML("beforeend", itemEl)
+items.append(...ingredient1)
